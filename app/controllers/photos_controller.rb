@@ -4,7 +4,8 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = current_user.photos.new(url: params[:photo][:url])
+    @photo = Photo.new
+    @photo.url = params[:file]
     if @photo.save
       redirect_to root_path
     end

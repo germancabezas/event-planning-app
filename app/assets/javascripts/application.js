@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
-//= require ng-flow.min
+//= require angular-file-upload
 //= require app
 //= require_tree .
