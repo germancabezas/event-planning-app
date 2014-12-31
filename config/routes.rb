@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'photos#new'
+  root 'pages#home'
 
   resources :photos, only: [:new, :create]
 

@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
+//= require unify/app
 //= require angular
 //= require angular-file-upload
 //= require app
