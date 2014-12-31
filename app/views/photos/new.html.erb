@@ -2,7 +2,15 @@
 
 <div ng-app="app">
   <div ng-controller="photosCtrl">
-    {{ 1+ 1}}
   </div>
 
+  <%= form_for @photo do |f| %>
+    <%= f.file_field :url %>
+
+    <%= f.submit %>
+  <% end %>
+
+  <% Photo.all.each do |photo| %>
+    <%= image_tag photo.url, :width => "50" %>
+  <% end %>
 </div>
