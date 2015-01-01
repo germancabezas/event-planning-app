@@ -9,6 +9,6 @@ class Photo < ActiveRecord::Base
   end
 
   def friendly_created_at
-    created_at.strftime('%A')
+    created_at.strftime('%b %d, %Y')
   end
 end
