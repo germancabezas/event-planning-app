@@ -21,6 +21,8 @@ gem 'mysql2'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'lm-rails-4-2'
 gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'
 
 # Documentation
 gem 'sdoc', '~> 0.4.0', group: :doc
