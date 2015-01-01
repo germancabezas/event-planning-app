@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find_by(params[:id])
+    @photo = Photo.find_by(id: params[:id])
   end
 
   def new
@@ -20,4 +20,9 @@ class PhotosController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def edit
+    @photo = Photo.find_by(id: params[:id])
+  end
+
 end

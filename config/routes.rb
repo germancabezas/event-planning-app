@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :photos, only: [:new, :create, :index, :show]
+  resources :photos
 
   devise_for :users
+
+  namespace :api do
+    namespace :v1 do
+      resources :photos, only: [:show, :update]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

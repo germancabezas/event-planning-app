@@ -1,5 +1,5 @@
 <div class="blog margin-bottom-40">
-  <h2><a href="blog_item_option1.html"><%= photo.name %></a></h2>
+  <h2><%= link_to photo.name, photo_path(photo.id) %></a></h2>
     <div class="blog-post-tags">
         <ul class="list-unstyled list-inline blog-info">
             <li><i class="fa fa-calendar"></i><%= photo.friendly_created_at %></li>

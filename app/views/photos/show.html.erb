@@ -1,0 +1,32 @@
+<div class="row portfolio-item margin-bottom-50"> 
+    <!-- Carousel -->
+    <div class="col-md-7">
+        <%= image_tag @photo.url %>
+    </div>
+    <!-- End Carousel -->
+
+    <!-- Content Info -->        
+    <div class="col-md-5">
+      <h2>
+        <%= @photo.name %>
+        <% if user_is_owner?(@photo) %>
+            <span class="small"><%= link_to "Edit", edit_photo_path(@photo) %></span>
+        <% end %>
+      </h2>
+        <p><%= @photo.description %></p>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-user color-green"></i><%= @photo.user_fullname %></li>
+          <li><i class="fa fa-calendar color-green"></i><%= @photo.friendly_created_at %></li>
+          <li><i class="fa fa-tags color-green"></i> Websites, Google, HTML5/CSS3</li>
+        </ul>
+        <a href="#" class="btn-u btn-u-large">Contact the Vendor</a>
+    </div>
+    <!-- End Content Info -->        
+</div><!--/row-->
+
+<div class="tag-box tag-box-v2">
+    <p>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.</p>
+</div>
+
+
+

@@ -1,0 +1,45 @@
+<h1>Edit Photo</h1>
+
+<div ng-app="app">
+
+  <div ng-controller="editPhotosCtrl" ng-init="setup(<%= current_user.id %>, <%= @photo.id %>)">
+    <div class="row">
+
+      <div class="col-md-3">
+        <%= image_tag @photo.url, width: "200" %>
+      </div>
+
+      <div class="col-md-9">
+
+
+        <form action="" class="sky-form">
+            <header>Edit Photo Details</header>
+            
+            <fieldset>
+              <section>
+                  <label class="label">Name</label>
+                  <label class="input">
+                      <input ng-model="photo.name">
+                  </label>
+              </section>
+
+              <section>
+                  <label class="label">Description</label>
+                  <label class="textarea">
+                      <textarea rows="8" ng-model="photo.description"></textarea>
+                  </label>
+              </section>
+
+              <footer>
+                  <button type="submit" class="btn-u btn-u-default" ng-click="saveChanges()">Save Changes</button>
+                  <button type="button" class="btn-u" onclick="window.history.back();">Back</button>
+              </footer>
+
+
+            </fieldset>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
