@@ -1,10 +1,3 @@
-class NoCompression
-  def compress(string)
-     # do nothing
-     string
-  end
-end
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -33,7 +26,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   # config.assets.js_compressor = :uglifier
-  # config.assets.js_compressor = Uglifier.new(mangle: false)
+  config.assets.js_compressor = Uglifier.new(mangle: false)
   # config.assets.js_compressor = NoCompression.new
   # config.assets.css_compressor = :sass
 
