@@ -19,6 +19,7 @@
  *= require unify/plugins
  *= require unify/ie8
  *= require unify/theme-skins/dark
+ *= require unify/pages/page_log_reg_v1
  *= require_tree .
  *= require_self
  */
