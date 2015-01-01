@@ -13,15 +13,15 @@
  *= require bootstrap.min
  *= require bootstrap-theme
  *= require font-awesome.min
- *= require unify/app
- *= require unify/style
- *= require unify/blocks
- *= require unify/plugins
- *= require unify/ie8
- *= require unify/theme-skins/dark
- *= require unify/pages/page_log_reg_v1
- *= require unify/sky-forms
- *= require unify/custom-sky-forms
+ *= require app
+ *= require style
+ *= require blocks
+ *= require plugins
+ *= require ie8
+ *= require theme-skins/dark
+ *= require pages/page_log_reg_v1
+ *= require sky-forms
+ *= require custom-sky-forms
  *= require_tree .
  *= require_self
  */
