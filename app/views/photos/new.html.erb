@@ -2,8 +2,8 @@
 
 <div ng-app="app">
   <div ng-controller="photosCtrl" ng-init="setup(<%= current_user.id %>)">
-    {{1+1}}
-    <input type="file" nv-file-select="" uploader="uploader" multiple  /><br/>
+
+    <input type="file" nv-file-select="" uploader="uploader" multiple /><br/>
     <ul>
         <li ng-repeat="item in uploader.queue">
             Name: <span ng-bind="item.file.name"></span><br/>
@@ -18,7 +18,4 @@
     </div>
   </div>
   
-  <% Photo.all.each do |photo| %>
-    <%= image_tag photo.url, :width => "50" %>
-  <% end %>
 </div>

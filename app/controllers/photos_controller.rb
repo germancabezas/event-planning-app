@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_vendor!, :except => [:show]
+  before_action :authenticate_vendor!, :except => [:show, :create] #current_user isn't available in create which is triggered via ajax
 
   def index
     @photos = current_user.photos
@@ -15,7 +15,8 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(url: params[:file], user_id: params[:user_id])
-    if @photo.save
+    user = User.find_by(id: params[:user_id])
+    if user.vendor? && @photo.save
       redirect_to root_path
     end
   end
