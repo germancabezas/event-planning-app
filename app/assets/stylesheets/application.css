@@ -14,10 +14,15 @@
  *= require bootstrap-theme
  *= require font-awesome.min
  *= require app
- *= require style
  *= require blocks
  *= require plugins
  *= require ie8
+ *= require plugins/animate
+ *= require plugins/box-shadows
+ *= require plugins/style-switcher
+ *= require headers/header-default
+ *= require footers/footer-v2
+ *= require style
  *= require theme-skins/dark
  *= require pages/page_log_reg_v1
  *= require sky-forms
