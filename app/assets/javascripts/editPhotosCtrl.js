@@ -1,7 +1,7 @@
 (function() {
   "use strict";
 
-  angular.module("app").controller("editPhotosCtrl", function($scope, $http) {
+  angular.module("app").controller("editPhotosCtrl", ['$scope', '$http', function($scope, $http) {
     
     $scope.setup = function(userId, photoId) {
       $scope.userId = userId;
@@ -22,6 +22,6 @@
     }
 
     window.scope = $scope;
-  });
+  }]);
 
 }());
