@@ -1,7 +1,8 @@
 <h1>Upload your photos</h1>
 
 <div ng-app="app">
-  <div ng-controller="photosCtrl">{{1+1}}
+  <div ng-controller="photosCtrl" ng-init="setup(<%= current_user.id %>)">
+    {{1+1}}
     <input type="file" nv-file-select="" uploader="uploader" multiple  /><br/>
     <ul>
         <li ng-repeat="item in uploader.queue">
@@ -13,7 +14,7 @@
         <span class="glyphicon glyphicon-upload"></span> Upload all
     </button>
     <div class="progress" style="">
-        <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }">{{ uploader.progress }}</div>
+        <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
     </div>
   </div>
   

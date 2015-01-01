@@ -2,11 +2,16 @@
   "use strict";
 
   angular.module("app").controller("photosCtrl", function($scope, FileUploader) {
-    $scope.uploader = new FileUploader({url: '/photos'});
+    
+    $scope.setup = function(id) {
+      $scope.userId = id;
+      $scope.uploader = new FileUploader({url: '/photos?user_id=' + $scope.userId });
+      $scope.uploader.onCompleteAll = function() {
+        console.info('onCompleteAll');
+      };
+    }
 
-    $scope.uploader.onCompleteAll = function() {
-      console.info('onCompleteAll');
-    };
+    
 
     window.scope = $scope;
   });
