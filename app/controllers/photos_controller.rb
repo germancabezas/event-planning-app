@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(url: params[:file], user_id: params[:user_id])
+    @photo = Photo.new(url: params[:file], user_id: params[:user_id], name: "Change Name", description: "Change Description")
     user = User.find_by(id: params[:user_id])
     if user.vendor? && @photo.save
       redirect_to root_path
