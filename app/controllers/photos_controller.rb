@@ -1,5 +1,13 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_vendor!
+  before_action :authenticate_vendor!, :except => [:show]
+
+  def index
+    @photos = current_user.photos
+  end
+
+  def show
+    @photo = Photo.find_by(params[:id])
+  end
 
   def new
     @photo = Photo.new

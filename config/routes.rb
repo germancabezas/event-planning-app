@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  resources :photos, only: [:new, :create]
+  resources :photos, only: [:new, :create, :index, :show]
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

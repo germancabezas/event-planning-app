@@ -1,0 +1,24 @@
+<div class="blog margin-bottom-40">
+  <h2><a href="blog_item_option1.html"><%= photo.name %></a></h2>
+    <div class="blog-post-tags">
+        <ul class="list-unstyled list-inline blog-info">
+            <li><i class="fa fa-calendar"></i><%= photo.friendly_created_at %></li>
+            <li><i class="fa fa-pencil"></i><%= photo.user_fullname %></li>
+            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+        </ul>
+        <ul class="list-unstyled list-inline blog-tags">
+            <li>
+                <i class="fa fa-tags"></i> 
+                <a href="#">Technology</a> 
+                <a href="#">Education</a>
+                <a href="#">Internet</a>
+                <a href="#">Media</a>
+            </li>
+        </ul>                                                
+    </div>
+    <div class="blog-img">
+        <%= image_tag photo.url, class: "image-responsive" %>
+    </div>
+    <p><%= photo.description %></p>
+    <p><a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a></p>
+</div>

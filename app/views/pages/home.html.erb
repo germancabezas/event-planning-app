@@ -3,55 +3,29 @@
 <div class="row blog-page">    
 <!-- Left Sidebar -->
 <div class="col-md-9">
-      <!--Blog Post-->   
   <% @photos.each do |photo| %>
       
-        
-    <div class="blog margin-bottom-40">
-        <h2><a href="blog_item_option1.html"><%= photo.name %></a></h2>
-          <div class="blog-post-tags">
-              <ul class="list-unstyled list-inline blog-info">
-                  <li><i class="fa fa-calendar"></i><%= photo.friendly_created_at %></li>
-                  <li><i class="fa fa-pencil"></i><%= photo.user_fullname %></li>
-                  <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
-              </ul>
-              <ul class="list-unstyled list-inline blog-tags">
-                  <li>
-                      <i class="fa fa-tags"></i> 
-                      <a href="#">Technology</a> 
-                      <a href="#">Education</a>
-                      <a href="#">Internet</a>
-                      <a href="#">Media</a>
-                  </li>
-              </ul>                                                
-          </div>
-          <div class="blog-img">
-              <%= image_tag photo.url, class: "image-responsive" %>
-          </div>
-          <p><%= photo.description %></p>
-          <p><a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a></p>
-      </div>
-      <!--End Blog Post-->        
+    <%= render "photos/photo", photo: photo %>        
       
   <% end %>
-      <!--Pagination-->
-      <div class="text-center">
-          <ul class="pagination">
-              <li><a href="#">«</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li class="active"><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">6</a></li>
-              <li><a href="#">7</a></li>
-              <li><a href="#">8</a></li>
-              <li><a href="#">»</a></li>
-          </ul>                                                            
-      </div>
-      <!--End Pagination-->
+  <!--Pagination-->
+  <div class="text-center">
+      <ul class="pagination">
+          <li><a href="#">«</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">»</a></li>
+      </ul>                                                            
   </div>
-  <!-- End Left Sidebar -->
+  <!--End Pagination-->
+</div>
+<!-- End Left Sidebar -->
 
   <!-- Right Sidebar -->
 <div class="col-md-3 magazine-page">
