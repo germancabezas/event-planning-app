@@ -6,6 +6,5 @@ CarrierWave.configure do |config|
     :region                 => 'us-west-2',
   }
   config.fog_directory  = ENV['S3_BUCKET_NAME']
-  puts config.fog_credentials
   # config.fog_attributes = {'Cache-Control'=>"max-age=#{365.day.to_i}"} # optional, defaults to {}
 end
